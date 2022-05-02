@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Medium.otf">
+            <string>SFProText-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--My Athletes View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MyAthletesViewController" id="BYZ-38-t0r" customClass="MyAthletesViewController" customModule="TestTaskVajinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7nM-37-ens">
+                                <rect key="frame" x="0.0" y="88" width="414" height="49"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="r1z-p9-NEC"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="BLAYZE+"/>
+                                    <segment title="RECRUITS"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentDidTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="5GY-Ua-Yzc"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Y2e-Jp-cfA">
+                                <rect key="frame" x="0.0" y="136" width="414" height="760"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jg8-hQ-DcQ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="v0l-RY-eqj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="AppRedColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7nM-37-ens" secondAttribute="trailing" id="Ajb-OL-jiO"/>
+                            <constraint firstItem="Y2e-Jp-cfA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LHF-Wg-GON"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y2e-Jp-cfA" secondAttribute="trailing" id="Q4t-s2-rSc"/>
+                            <constraint firstItem="Y2e-Jp-cfA" firstAttribute="top" secondItem="7nM-37-ens" secondAttribute="bottom" id="Zdc-iX-gLg"/>
+                            <constraint firstItem="7nM-37-ens" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="b0D-Ak-kMg"/>
+                            <constraint firstItem="7nM-37-ens" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fYp-OU-3dP"/>
+                            <constraint firstAttribute="bottom" secondItem="Y2e-Jp-cfA" secondAttribute="bottom" id="h2w-1t-cZ9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AUo-o6-QvT"/>
+                    <connections>
+                        <outlet property="athletesTableView" destination="Y2e-Jp-cfA" id="cwa-85-he4"/>
+                        <outlet property="segmentControl" destination="7nM-37-ens" id="T4b-QB-dus"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992.75362318840587" y="-72.321428571428569"/>
+        </scene>
+        <!--Search Athlete View Controller-->
+        <scene sceneID="SSc-V6-PZh">
+            <objects>
+                <viewController storyboardIdentifier="SearchAthleteViewController" id="knT-Un-1SS" customClass="SearchAthleteViewController" customModule="TestTaskVajinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZaV-8S-Uio">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8gz-dq-5Fy">
+                                <rect key="frame" x="0.0" y="110" width="414" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="knT-Un-1SS" id="xyt-oE-hcC"/>
+                                    <outlet property="delegate" destination="knT-Un-1SS" id="A54-Ra-T1I"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1w-1p-9ys">
+                                <rect key="frame" x="20" y="64" width="78.5" height="26"/>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dbF-Dc-Dv6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8gz-dq-5Fy" firstAttribute="top" secondItem="P1w-1p-9ys" secondAttribute="bottom" constant="20" id="2eO-xx-uXg"/>
+                            <constraint firstItem="8gz-dq-5Fy" firstAttribute="leading" secondItem="dbF-Dc-Dv6" secondAttribute="leading" id="Fah-A3-C2n"/>
+                            <constraint firstItem="8gz-dq-5Fy" firstAttribute="bottom" secondItem="dbF-Dc-Dv6" secondAttribute="bottom" id="Fgt-uW-RiJ"/>
+                            <constraint firstItem="P1w-1p-9ys" firstAttribute="leading" secondItem="dbF-Dc-Dv6" secondAttribute="leading" constant="20" id="H1J-2r-20l"/>
+                            <constraint firstItem="P1w-1p-9ys" firstAttribute="top" secondItem="dbF-Dc-Dv6" secondAttribute="top" constant="20" id="QSP-jh-JsI"/>
+                            <constraint firstItem="dbF-Dc-Dv6" firstAttribute="trailing" secondItem="8gz-dq-5Fy" secondAttribute="trailing" id="WVO-Uz-jAI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchTable" destination="8gz-dq-5Fy" id="9k0-Hw-Ivd"/>
+                        <outlet property="titleLabel" destination="P1w-1p-9ys" id="gqR-Q1-gcN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mda-jC-vTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1669.5652173913045" y="-80.357142857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bsL-Ez-oSf">
+            <objects>
+                <navigationController storyboardIdentifier="athleteNav" automaticallyAdjustsScrollViewInsets="NO" id="slg-kf-WFr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ci2-ze-mdN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="AppRedColor"/>
+                        <color key="barTintColor" name="AppRedColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eXM-9R-awv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FlC-lv-SRg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82.608695652173921" y="-72.321428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AppRedColor">
+            <color red="0.94901960784313721" green="0.14509803921568629" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
