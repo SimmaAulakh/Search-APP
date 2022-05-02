@@ -44,7 +44,7 @@ class MyAthletesViewController: UIViewController, MyAthletesViewControllerProtoc
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.isTranslucent = true
-        navigationItem.title = "My Athletes"
+        navigationItem.title = "Message Search"
         showSearchBarButton(shouldShow: true)
         
         let searchVC = self.storyboard?.instantiateViewController(withIdentifier: Constants.Identiefiers.searchAthleteViewController)
