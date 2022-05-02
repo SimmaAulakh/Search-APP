@@ -11,7 +11,7 @@ class SearchAthleteViewController: UIViewController {
     
     //MARK: - IOutlets
     @IBOutlet weak var searchTable: UITableView!
-    @IBOutlet weak var titleLabel: UILabel!asasas
+    @IBOutlet weak var titleLabel: UILabel!
     
     //MARK: - Variables
     var athleteType: AthleteType? = .Blayze
